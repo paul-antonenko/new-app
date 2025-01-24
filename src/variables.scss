@@ -1,1 +1,90 @@
-$test-color: #ff14;
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-bold: 700;
+
+.links {
+  color: #525252;
+  font-weight: $font-medium;
+  line-height: 24%;
+  font-size: 16px;
+
+  &:hover {
+    color: #171717;
+    transition: all 0.3s;
+  }
+
+  &:focus {
+    color: #171717;
+    border-radius: 4px;
+    box-shadow: 0px 0px 0px 4px rgba(68, 76, 231, 0.12);
+    padding: 2px;
+  }
+
+  &:disabled {
+    color: #A3A3A3;
+  }
+}
+
+.secondary-btn {
+  font-weight: $font-medium;
+  font-size: 16px;
+  line-height: 24px;
+  color: #171717;
+  padding: 12px 29px;
+  background-color: #fff;
+  border: 0.5px solid #E6E6E6;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+
+  &:hover {
+    color: #0A0A0A;
+    background-color: #FAFAFA;
+    border: 1px solid #E6E6E6;
+    transition: all 0.3s;
+  }
+
+  &:focus {
+    color: #0A0A0A;
+    background-color: #FAFAFA;
+    border: 1px solid #E6E6E6;
+    transition: all 0.3s;
+    box-shadow: 0px 0px 0px 4px rgba(68, 76, 231, 0.12);
+  }
+
+  &:disabled {
+    color: #A3A3A3;
+    background-color: #F5F5F5;
+    box-shadow: none;
+  }
+}
+
+.primary-btn {
+  font-weight: $font-medium;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFF;
+  padding: 12px 38px;
+  border: none;
+  background-color: #4338CA;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+
+  &:hover {
+    background-color: #3730A3;
+    transition: all 0.3s;
+  }
+
+  &:focus {
+    background-color: #3730A3;
+    box-shadow: 0px 0px 0px 4px rgba(68, 76, 231, 0.12);
+  }
+
+  &:disabled {
+    color: #A3A3A3;
+    background-color: #F5F5F5;
+    box-shadow: none;
+  }
+}
