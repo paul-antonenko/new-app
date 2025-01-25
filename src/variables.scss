@@ -1,6 +1,7 @@
 $font-light: 300;
 $font-regular: 400;
 $font-medium: 500;
+$font-semi-bold: 600;
 $font-bold: 700;
 
 .links {
@@ -8,10 +9,11 @@ $font-bold: 700;
   font-weight: $font-medium;
   line-height: 24%;
   font-size: 16px;
+  cursor: pointer;
 
   &:hover {
     color: #171717;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
   }
 
   &:focus {
@@ -37,19 +39,21 @@ $font-bold: 700;
   border-radius: 4px;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
     0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+
 
   &:hover {
     color: #0A0A0A;
     background-color: #FAFAFA;
     border: 1px solid #E6E6E6;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
   }
 
   &:focus {
     color: #0A0A0A;
     background-color: #FAFAFA;
     border: 1px solid #E6E6E6;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
     box-shadow: 0px 0px 0px 4px rgba(68, 76, 231, 0.12);
   }
 
@@ -71,10 +75,12 @@ $font-bold: 700;
   border-radius: 4px;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
     0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+
 
   &:hover {
     background-color: #3730A3;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
   }
 
   &:focus {
