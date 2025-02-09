@@ -1,0 +1,46 @@
+@import '../variables.scss';
+
+.marquee {
+  padding: 96px 0;
+
+  &__title {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+    font-weight: $font-medium;
+    font-size: 16px;
+    line-height: 24px;
+    color: #525252;
+  }
+
+  &__container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    user-select: none;
+  }
+
+  &__content {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    gap: 1rem;
+  }
+
+  &__content>* {
+    flex-shrink: 0;
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.scroll:hover {
+  animation-play-state: paused;
+}

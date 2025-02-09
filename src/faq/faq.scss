@@ -1,0 +1,117 @@
+@import '../variables.scss';
+
+.faq {
+  padding: 96px;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  &__header-title {
+    font-weight: $font-semi-bold;
+    font-size: 48px;
+    line-height: 48px;
+    color: #171717;
+    margin: 0 40px 20px 40px;
+    text-align: center;
+  }
+
+  &__header-subtitle {
+    font-weight: $font-regular;
+    font-size: 20px;
+    line-height: 28px;
+    color: #525252;
+    text-align: center;
+    margin: 0px 160px 64px 160px;
+  }
+
+  &__accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__accordion-item {
+    border: none;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+
+    .faq__accordion-summary:before {
+      content: url('../../public/images/icons/faq-plus.svg');
+      position: absolute;
+      top: 5px;
+      right: 0;
+    }
+  }
+
+  &__accordion-item>&__accordion-summary {
+    list-style: none;
+  }
+
+  &__accordion-item[open] &__accordion-summary:before {
+    content: url('../../public/images/icons/faq.svg');
+    position: absolute;
+    top: 5px;
+    right: 0;
+  }
+
+  &__accordion-summary {
+    cursor: pointer;
+    font-weight: $font-medium;
+    font-size: 18px;
+    line-height: 28px;
+    color: #171717;
+    list-style: none;
+    position: relative;
+    transition: all 0.3s ease;
+
+    &::marker {
+      display: none;
+    }
+  }
+
+  &__accordion-content {
+    padding: 8px 40px 28px 0px;
+    font-size: 16px;
+    line-height: 24px;
+    border-bottom: 1px solid #d4d4d4;
+    margin-bottom: 28px;
+  }
+
+  &__support-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #E6E6E6;
+    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0px 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    padding: 32px;
+    margin-top: 28px;
+  }
+
+  &__support-title {
+    font-weight: $font-semi-bold;
+    font-size: 20px;
+    line-height: 28px;
+    color: #171717;
+    margin-bottom: 8px;
+  }
+
+  &__support-description {
+    font-weight: $font-regular;
+    font-size: 16px;
+    line-height: 24px;
+    color: #525252;
+  }
+}
+
+.faq__accordion-item:last-of-type .faq__accordion-content {
+  border-bottom: none;
+  margin-bottom: 0;
+}

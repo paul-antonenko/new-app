@@ -1,0 +1,27 @@
+.header {
+  margin: 16px 112px 0 112px;
+
+  &__nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1216px;
+    height: 68px;
+    margin-bottom: 16px;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav-link {
+    margin-right: 30px;
+    padding: 0 2px;
+  }
+
+  &__btn {
+    margin-left: 16px;
+  }
+}
