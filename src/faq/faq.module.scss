@@ -1,9 +1,9 @@
-@import '../variables.scss';
+@import '../variables.module.scss';
 
 .faq {
   padding: 96px;
 
-  &__header {
+  .header {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,7 +11,7 @@
     margin: 0 auto;
   }
 
-  &__header-title {
+  .title {
     font-weight: $font-semi-bold;
     font-size: 48px;
     line-height: 48px;
@@ -20,7 +20,7 @@
     text-align: center;
   }
 
-  &__header-subtitle {
+  .subtitle {
     font-weight: $font-regular;
     font-size: 20px;
     line-height: 28px;
@@ -29,37 +29,25 @@
     margin: 0px 160px 64px 160px;
   }
 
-  &__accordion {
+  .accordion {
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
 
-  &__accordion-item {
+  .accordionItem {
     border: none;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
-
-    .faq__accordion-summary:before {
-      content: url('../../public/images/icons/faq-plus.svg');
-      position: absolute;
-      top: 5px;
-      right: 0;
-    }
   }
 
-  &__accordion-item>&__accordion-summary {
-    list-style: none;
-  }
-
-  &__accordion-item[open] &__accordion-summary:before {
-    content: url('../../public/images/icons/faq.svg');
+  .icon {
     position: absolute;
     top: 5px;
     right: 0;
   }
 
-  &__accordion-summary {
+  .accordionHeader {
     cursor: pointer;
     font-weight: $font-medium;
     font-size: 18px;
@@ -68,13 +56,17 @@
     list-style: none;
     position: relative;
     transition: all 0.3s ease;
-
-    &::marker {
-      display: none;
-    }
+    width: 100%;
+    padding: 0px;
+    text-align: left;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  &__accordion-content {
+  .accordionContent {
     padding: 8px 40px 28px 0px;
     font-size: 16px;
     line-height: 24px;
@@ -82,7 +74,7 @@
     margin-bottom: 28px;
   }
 
-  &__support-wrapper {
+  .supportWrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -95,7 +87,7 @@
     margin-top: 28px;
   }
 
-  &__support-title {
+  .supportTitle {
     font-weight: $font-semi-bold;
     font-size: 20px;
     line-height: 28px;
@@ -103,15 +95,10 @@
     margin-bottom: 8px;
   }
 
-  &__support-description {
+  .supportDescription {
     font-weight: $font-regular;
     font-size: 16px;
     line-height: 24px;
     color: #525252;
   }
-}
-
-.faq__accordion-item:last-of-type .faq__accordion-content {
-  border-bottom: none;
-  margin-bottom: 0;
 }

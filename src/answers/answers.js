@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleQuestion } from '@fortawesome/free-regular-svg-icons';
+import classNames from "classnames";
+import Button from '../components/button/button';
 
-import "./answers.scss";
+import checkIcon from '../assets/images/icons/check.svg';
+import asidePhoto from '../assets/images/answer.png';
+
+import styles from "./answers.module.scss";
+import varStyles from '../variables.module.scss'
 
 function Answers() {
   const [isFocused, setIsFocused] = useState(false);
@@ -15,53 +21,54 @@ function Answers() {
     setHasError(event.target.value.trim() === '');
   };
   return (
-    <section className="answers">
-      <div className="container">
-        <div className="answers__content">
-          <div className="answers__info">
-            <h2 className="answers__title">Get the finest curated abstracts delivered weekly to your inbox</h2>
-            <ul className="answers__list">
-              <li className="answers__item">
-                <span className="answers__icon">
-                  <img src="/images/icons/check.svg" alt="Icon Checked" />
-                  <p className="answers__text">Exclusive access to new abstract images and collections</p>
-                </span>
-              </li>
-              <li className="answers__item">
-                <span className="answers__icon">
-                  <img src="/images/icons/check.svg" alt="Icon Checked" />
-                  <p className="answers__text">Unlock special promotions only for subscribers</p>
-                </span>
-              </li>
-              <li className="answers__item">
-                <span className="answers__icon">
-                  <img src="/images/icons/check.svg" alt="Icon Checked" />
-                  <p className="answers__text">Regular doses of artistic inspiration</p>
-                </span>
-              </li>
+    <section className={styles.answers}>
+      <div className={classNames(varStyles.container)}>
+        <div className={styles.content}>
+          <div className={styles.info}>
+            <h2 className={styles.title}>
+              Get the finest curated abstracts delivered weekly to your inbox
+            </h2>
+            <ul className={styles.list}>
+              {["Exclusive access to new abstract images and collections",
+                "Unlock special promotions only for subscribers",
+                "Regular doses of artistic inspiration"].map((text, index) => (
+                  <li key={index} className={styles.item}>
+                    <span className={styles.iconWrap}>
+                      <img src={checkIcon} alt="Checked Icon" />
+                      <p className={styles.text}>{text}</p>
+                    </span>
+                  </li>
+                ))}
             </ul>
-            <div className="answers__forms">
-              <form className="answers__form" action="email">
-                <div className="answers__form-input-wrap">
+            <div className={styles.forms}>
+              <form className={styles.form} action="email">
+                <div className={styles.inputWrap}>
                   <input
-                    className={`input ${hasError ? "error" : isFocused ? "focused" : isFilled ? "filled" : ""}`}
+                    className={`${styles.input} ${hasError ? styles.error : isFocused ? styles.focused : isFilled ? styles.filled : ""}`}
                     type="email"
                     onFocus={() => setIsFocused(true)}
                     onBlur={handleBlur}
                     name="email"
                     placeholder="name@email.com"
                   />
-                  <FontAwesomeIcon icon={faCircleQuestion} className={`input-icon ${hasError ? "icon-error" : "icon-normal"}`} />
+                  <FontAwesomeIcon
+                    icon={faCircleQuestion}
+                    className={`${styles.inputIcon} ${hasError ? styles.iconError : styles.iconNormal}`}
+                  />
                 </div>
-                {isFocused && !hasError && <span className="hint-text">This is a hint text.</span>}
-                {hasError && <span className="error-message">This is an error message.</span>}
-                <button className="answers__btn primary-btn" type="submit">Subscribe</button>
+                {isFocused && !hasError && (
+                  <span className={styles.hintText}>This is a hint text.</span>
+                )}
+                {hasError && (
+                  <span className={styles.errorMessage}>This is an error message.</span>
+                )}
+                <Button type='primary' className={styles.btn}>Subscribe</Button>
               </form>
-              <p className="answers__form-safely-text">We only send you the best! No spam.</p>
+              <p className={styles.safelyText}>We only send you the best! No spam.</p>
             </div>
           </div>
-          <div className="answers__img">
-            <img src="/images/answer.png" alt="Answer images" />
+          <div className={styles.imgWrapper}>
+            <img src={asidePhoto} alt="Answer images" className={styles.img} />
           </div>
         </div>
       </div>

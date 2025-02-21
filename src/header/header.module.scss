@@ -1,7 +1,7 @@
 .header {
   margin: 16px 112px 0 112px;
 
-  &__nav-wrapper {
+  .navWrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10,18 +10,20 @@
     margin-bottom: 16px;
   }
 
-  &__nav {
+  .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  &__nav-link {
+  .navLink {
     margin-right: 30px;
     padding: 0 2px;
   }
 
-  &__btn {
-    margin-left: 16px;
+  .btnWrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
   }
 }

@@ -1,7 +1,7 @@
-@import '../variables.scss';
+@import '../variables.module.scss';
 
 .answers {
-  &__content {
+  .content {
     padding: 96px 64px;
     display: flex;
     justify-content: space-between;
@@ -9,7 +9,12 @@
     gap: 32px;
   }
 
-  &__title {
+  .info {
+    width: 592px;
+    height: 460px;
+  }
+
+  .title {
     font-weight: $font-semi-bold;
     font-size: 48px;
     line-height: 48px;
@@ -17,7 +22,11 @@
     margin-bottom: 64px;
   }
 
-  &__icon {
+  .list {
+    list-style: none;
+  }
+
+  .iconWrap {
     display: flex;
     justify-content: start;
     margin-bottom: 16px;
@@ -25,18 +34,18 @@
     overflow: hidden;
   }
 
-  &__text {
+  .text {
     font-weight: $font-regular;
     font-size: 16px;
     line-height: 24px;
     color: #525252;
   }
 
-  &__forms {
+  .forms {
     margin-top: 48px;
   }
 
-  &__form {
+  .form {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -45,12 +54,7 @@
     position: relative;
   }
 
-  &__info {
-    width: 592px;
-    height: 460px;
-  }
-
-  &__form-input-wrap {
+  .inputWrap {
     position: relative;
     display: flex;
     align-items: center;
@@ -91,17 +95,17 @@
     outline: red;
   }
 
-  .input-icon {
+  .inputIcon {
     position: absolute;
     right: 10px;
     color: #A3A3A3;
   }
 
-  .icon-error {
+  .iconError {
     color: #DC2626;
   }
 
-  .hint-text {
+  .hintText {
     color: #737373;
     font-size: 14px;
     line-height: 20px;
@@ -110,7 +114,7 @@
     top: 40px;
   }
 
-  .error-message {
+  .errorMessage {
     color: #DC2626;
     font-size: 14px;
     line-height: 20px;
@@ -119,7 +123,7 @@
     top: 40px;
   }
 
-  &__btn[type='submit'] {
+  .btn {
     height: 40px;
     max-width: 98px;
     width: 100%;
@@ -129,14 +133,14 @@
     line-height: 20px;
   }
 
-  &__form-safely-text {
+  .safelyText {
     font-weight: $font-regular;
     font-size: 16px;
     line-height: 24px;
     color: #525252;
   }
 
-  &__img {
+  .imgWrapper {
     width: 592px;
   }
 }

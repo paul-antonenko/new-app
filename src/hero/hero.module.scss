@@ -1,7 +1,7 @@
-@import '../variables.scss';
+@import '../variables.module.scss';
 
 .hero {
-  &__content {
+  .wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,11 +9,11 @@
     padding: 96px;
   }
 
-  &__info {
+  .content {
     max-width: 488px;
   }
 
-  &__title {
+  .title {
     font-weight: $font-semi-bold;
     font-size: 60px;
     line-height: 60px;
@@ -21,7 +21,7 @@
     margin-bottom: 24px;
   }
 
-  &__description {
+  .description {
     font-weight: $font-regular;
     font-size: 20px;
     line-height: 28px;
@@ -29,12 +29,12 @@
     margin-bottom: 64px;
   }
 
-  &__btns {
+  .btnWrap {
     display: flex;
     gap: 32px;
   }
 
-  &__img {
+  .imgWrap {
     width: 100%;
   }
 }
