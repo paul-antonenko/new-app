@@ -40,38 +40,10 @@
     }
   }
 
-
   .wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 32px;
     row-gap: 72px;
-  }
-
-  .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    img {
-      margin-bottom: 20px;
-    }
-
-    h4 {
-      font-weight: $font-semi-bold;
-      font-size: 20px;
-      line-height: 28px;
-      color: #171717;
-      margin-bottom: 8px;
-    }
-
-    p {
-      font-weight: $font-regular;
-      font-size: 16px;
-      line-height: 24px;
-      color: #525252;
-    }
   }
 }

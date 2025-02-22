@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import classNames from "classnames";
-import PricingCard, { plans } from "../components/pricingCard/pricingCard";
+import PricingCard, { plans } from "./pricingCard";
 
 import styles from "./pricing.module.scss";
-import varStyles from '../variables.module.scss'
+import varStyles from "../variables.module.scss";
 
 function Pricing() {
   const [isMonthly, setIsMonthly] = useState(true);
@@ -21,13 +21,13 @@ function Pricing() {
         <div className={styles.content}>
           <div className={styles.toggle}>
             <button
-              className={`${styles.toggleBtn} ${isMonthly ? styles.active : ""}`}
+              className={classNames(styles.toggleBtn, { [styles.active]: isMonthly })}
               onClick={() => setIsMonthly(true)}
             >
               Monthly
             </button>
             <button
-              className={`${styles.toggleBtn} ${!isMonthly ? styles.active : ""}`}
+              className={classNames(styles.toggleBtn, { [styles.active]: !isMonthly })}
               onClick={() => setIsMonthly(false)}
             >
               Annually
@@ -35,7 +35,7 @@ function Pricing() {
           </div>
           <div className={styles.cards}>
             {plans.map((plan, index) => (
-              <PricingCard key={index} {...plan} />
+              <PricingCard key={index} plan={plan} isMonthly={isMonthly} />
             ))}
           </div>
         </div>

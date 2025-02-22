@@ -1,0 +1,38 @@
+@import '../variables.module.scss';
+
+.footer {
+  .wrapper {
+    padding: 96px 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-around;
+    gap: 26px;
+    margin-bottom: 32px;
+  }
+
+  .navLink {
+    font-family: $font-medium;
+    font-size: 14px;
+    line-height: 20px;
+    color: #525252;
+  }
+
+  .socialItem {
+    display: flex;
+    justify-content: space-around;
+    gap: 24px;
+    margin-bottom: 16px;
+  }
+
+  .text {
+    font-family: $font-regular;
+    font-size: 14px;
+    line-height: 20px;
+    color: #171717;
+  }
+}

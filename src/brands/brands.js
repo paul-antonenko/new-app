@@ -5,6 +5,8 @@ import Marquee from "react-fast-marquee";
 import styles from "./brands.module.scss";
 import varStyles from '../variables.module.scss'
 
+import BrandItem from "./BrandItem";
+
 import WanNain from "../assets/images/brands/brand1.svg";
 import Robinwood from "../assets/images/brands/brand2.svg";
 import Swapdo from "../assets/images/brands/brand3.svg";
@@ -26,20 +28,17 @@ const brands = [
 ];
 
 function Brands() {
+
   return (
     <section className={styles.brands}>
       <div className={classNames(varStyles.container)}>
         <h3 className={styles.title}>Used by teams that you love</h3>
-        <div className={styles.container}>
-          <div className={styles.brandsWrap}>
-            <Marquee speed={50} gradient={false} className={styles.marquee}>
-              {brands.map((brand, index) => (
-                <div key={index} className={styles.brandItem}>
-                  <img src={brand.logo} alt={brand.name} />
-                </div>
-              ))}
-            </Marquee>
-          </div>
+        <div className={styles.brandsWrap}>
+          <Marquee speed={50} gradient={false} className={styles.marquee}>
+            {brands.map((brand, index) => (
+              <BrandItem key={index} name={brand.name} logo={brand.logo} />
+            ))}
+          </Marquee>
         </div>
       </div>
     </section>

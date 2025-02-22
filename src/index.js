@@ -15,6 +15,7 @@ import Pricing from './pricing/pricing';
 import Faq from './faq/faq';
 import Answers from './answers/answers';
 import Contact from './contact/contact';
+import Footer from './footer/footer';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -31,6 +32,7 @@ root.render(
       <Faq />
       <Answers />
       <Contact />
+      <Footer />
     </main>
   </React.StrictMode>
 );

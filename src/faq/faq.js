@@ -39,7 +39,7 @@ const Accordion = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={`${styles.accordionItem} ${isOpen ? styles.open : ""}`}>
+    <div className={classNames(styles.accordionItem, { [styles.open]: isOpen })}>
       <button className={styles.accordionHeader} onClick={() => setIsOpen(!isOpen)}>
         <span>{question}</span>
         <img className={styles.icon} src={isOpen ? minusIcon : plusIcon} />
