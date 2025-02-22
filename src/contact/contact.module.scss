@@ -1,0 +1,216 @@
+@import '../variables.module.scss';
+
+.contact {
+  .wrapper {
+    padding: 96px;
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  .content {
+    padding: 11px 0;
+    max-width: 592px;
+    width: 100%;
+  }
+
+  .title {
+    font-family: $font-semi-bold;
+    font-size: 60px;
+    line-height: 60px;
+    color: #171717;
+    margin-bottom: 20px;
+  }
+
+  .subtitle {
+    font-family: $font-regular;
+    font-size: 20px;
+    line-height: 28px;
+    color: #525252;
+  }
+
+  .links {
+    margin-top: 48px;
+  }
+
+  .item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .text {
+    font-family: $font-medium;
+    font-size: 16px;
+    line-height: 24px;
+    color: #525252;
+  }
+
+  .formWrapper {
+    width: 592px;
+    height: 398px;
+    background-color: #fff;
+    border: 1px solid #E6E6E6;
+    border-radius: 8px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .form {
+    padding: 32px;
+  }
+
+  .formInner {
+    margin-top: 26px;
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  .inputWrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      position: absolute;
+      content: attr(data-label);
+      font-family: $font-medium;
+      font-size: 14px;
+      line-height: 20px;
+      color: #404040;
+      top: -25px;
+      left: 0;
+    }
+  }
+
+  .input {
+    background-color: #FAFAFA;
+    width: 248px;
+    height: 40px;
+    padding: 10px 38px 10px 14px;
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+    margin: 0;
+    color: #171717;
+    font-weight: $font-regular;
+    font-size: 14px;
+    line-height: 20px;
+    transition: all 0.3s ease;
+
+    &::placeholder {
+      color: #737373;
+    }
+  }
+
+  .input.focused {
+    border-radius: 4px;
+    box-shadow: 0px 0px 0px 1px rgba(68, 76, 231, 1),
+      0px 1px 2px 0px rgba(16, 24, 40, 0.5),
+      0px 0px 0px 4px rgba(68, 76, 231, 0.12);
+    outline: blue;
+  }
+
+  .input.error {
+    border-radius: 4px;
+    box-shadow: 0px 0px 0px 1px rgba(217, 45, 32, 1),
+      0px 0px 0px 4px rgba(217, 45, 32, 0.12);
+    outline: red;
+  }
+
+  .inputIcon {
+    position: absolute;
+    right: 10px;
+    color: #A3A3A3;
+  }
+
+  .iconError {
+    color: #DC2626;
+  }
+
+  .textareaWrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      position: absolute;
+      content: attr(data-label);
+      font-family: $font-medium;
+      font-size: 14px;
+      line-height: 20px;
+      color: #404040;
+      top: 25px;
+      left: 0;
+    }
+  }
+
+  .textarea {
+    resize: none;
+    margin-top: 50px;
+    background-color: #FAFAFA;
+    width: 100%;
+    height: 108px;
+    padding: 10px 38px 10px 14px;
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+    color: #171717;
+    font-weight: $font-regular;
+    font-size: 14px;
+    line-height: 20px;
+    transition: all 0.3s ease;
+
+    &::placeholder {
+      color: #737373;
+    }
+  }
+
+  .textarea.focused {
+    border-radius: 4px;
+    box-shadow: 0px 0px 0px 1px rgba(68, 76, 231, 1),
+      0px 1px 2px 0px rgba(16, 24, 40, 0.5),
+      0px 0px 0px 4px rgba(68, 76, 231, 0.12);
+    outline: blue;
+  }
+
+  .textarea.error {
+    border-radius: 4px;
+    box-shadow: 0px 0px 0px 1px rgba(217, 45, 32, 1),
+      0px 0px 0px 4px rgba(217, 45, 32, 0.12);
+    outline: red;
+  }
+
+  .hintText {
+    color: #737373;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: $font-regular;
+    position: absolute;
+    bottom: -25px;
+  }
+
+  .errorMessage {
+    color: #DC2626;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: $font-regular;
+    position: absolute;
+    bottom: -25px;
+  }
+
+  .charCounter {
+    font-family: $font-regular;
+    font-size: 14px;
+    line-height: 20px;
+    color: #737373;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 6px;
+  }
+
+  .btn {
+    margin-top: 40px;
+    width: 100%;
+  }
+}

@@ -2,6 +2,9 @@ import React from "react";
 import Features from "../components/features/features";
 
 import infoImg from '../assets/images/infoImg.png'
+import icon10 from "../assets/images/icons/icon10.svg";
+import icon11 from "../assets/images/icons/icon11.svg";
+import icon12 from "../assets/images/icons/icon12.svg";
 
 const featuresData = {
   title: "Best-in-class support",
@@ -10,19 +13,19 @@ const featuresData = {
   imageSrc: infoImg,
   items: [
     {
-      icon: "/images/icons/icon10.svg",
+      icon: icon10,
       alt: "Icon Rocket",
       title: "Faster downloads",
       subtitle: "Our robust servers are primed to deliver the highest resolution images swiftly, ensuring a smooth download experience.",
     },
     {
-      icon: "/images/icons/icon11.svg",
+      icon: icon11,
       alt: "Icon Water",
       title: "Icon Team",
       subtitle: "Your single account can accommodate multiple users simultaneously downloading without any disruptions, streamlining teamwork and productivity.",
     },
     {
-      icon: "/images/icons/icon12.svg",
+      icon: icon12,
       alt: "Icon Watermark",
       title: "Royalty-free licensing",
       subtitle: "Our straightforward, royalty-free licensing means your chosen images are yours to innovate with, without the hassle of negotiating usage rights for every new project.",
